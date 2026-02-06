@@ -24,3 +24,14 @@ SELECT
 FROM ecommerce_sales_data
 GROUP BY Region
 ORDER BY total_profit DESC;
+-- Business Question 4:
+-- Top Products by Profit
+
+SELECT
+    Product_Name,
+    SUM(Sales) AS total_sales,
+    SUM(Profit) AS total_profit
+FROM ecommerce_sales_data
+GROUP BY Product_Name
+ORDER BY total_profit DESC
+LIMIT 10;
