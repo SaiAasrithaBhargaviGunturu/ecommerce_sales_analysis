@@ -5,3 +5,12 @@ SELECT
     SUM(Sales) AS total_sales,
     SUM(Profit) AS total_profit
 FROM ecommerce_sales_data;
+-- Business Question 2:
+-- Sales and Profit by Category
+SELECT
+    Category,
+    SUM(Sales)  AS total_sales,
+    SUM(Profit) AS total_profit
+FROM ecommerce_sales_data
+GROUP BY Category
+ORDER BY total_profit DESC;
